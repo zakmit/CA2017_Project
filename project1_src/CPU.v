@@ -2,9 +2,9 @@
 // Adder ADD
 // MUX32 mux1
 // MUX32 mux2
+// MUX32 MUX5
 // Shift_left_2  Shift_left_2
 // Shift_left_0_27__28_31 Shift_left_0_27__28_31   // link IF_ID and MUX1.o
-// MUX32 MUX5
 // EQ EQ <<---- maybe wrong
 
 

@@ -72,66 +72,66 @@ wire [31:0]   EQ_DATA_O;
 
 //HD
 wire 	HD_MUX8_O;  // 0 = off , 1 = on
-wire	HD_PC_O;    
+wire	HD_PC_O;
 wire	HD_IFID_O;  // 0 = no hazard , 1 = hazard
 //IF_ID
 wire [31:0]  IF_ID_PC;
 wire [31:0]  IF_ID_INST;
 
-//MEM_WB 
+//MEM_WB
 wire [31:0]   MEM_WB_ALU_O;
 wire [31:0]   MEM_WB_READDATA_O;
 wire [4:0]    MEM_WB_RD;
-wire          MEM_WB_MEMTOREG;
-wire					MEM_WB_REGWRITE;
+wire      MEM_WB_MEMTOREG;
+wire      MEM_WB_REGWRITE;
 
 //IDEX
-wire				IDEX_WB_O;
-wire				IDEX_M_O;
-wire [3:0]	IDEX_EX_O;
-wire [31:0] IDEX_DATA1_O;
-wire [31:0] IDEX_DATA2_O;
-wire [31:0] IDEX_SIGNEXTEND_O;
-wire [4:0] 	IDEX_RS_O;
-wire [4:0]	IDEX_RT_O;
-wire [4:0]	IDEX_RD_O;
+wire    IDEX_WB_O;
+wire    IDEX_M_O;
+wire [3:0]    IDEX_EX_O;
+wire [31:0]   IDEX_DATA1_O;
+wire [31:0]   IDEX_DATA2_O;
+wire [31:0]   IDEX_SIGNEXTEND_O;
+wire [4:0]    IDEX_RS_O;
+wire [4:0]    IDEX_RT_O;
+wire [4:0]    IDEX_RD_O;
 
 
 IFID IFID(
-			.clk_i					(clk_i),
-			.add_pc_i				(ADD_PC_DATA_O),
-			.instruction_i	(inst), //from instruction.o
-			.flush_i				(CONTROL_JUMP_O | (CONTROL_BRANCH_O & EQ_DATA_O)),
-			.hazard_i 			(HD_IFID_O),
-			.pc_o						(IF_ID_PC),
-			.inst_o					(IF_ID_INST)
+    .clk_i      (clk_i),
+    .add_pc_i     (ADD_PC_DATA_O),
+    .instruction_i      (inst), //from instruction.o
+    .flush_i      (CONTROL_JUMP_O | (CONTROL_BRANCH_O & EQ_DATA_O)),
+    .hazard_i     (HD_IFID_O),
+    .pc_o     (IF_ID_PC),
+    .inst_o     (IF_ID_INST)
 );// DONE
 
 
 
 
 IDEX IDEX(
-			.clk_i				(clk_i),
-			.wb_i					(MUX8_MUX8_O[7:6]),
-			.m_i					(MUX8_MUX8_O[5:4]),
-			.ex_i					(MUX8_MUX8_O[3:0]),
-			.add_pc_i			(IF_ID_PC), // no use anymore
-			.data1_i			(registerout1),
-			.data2_i			(registerout2),
-			.signextend_i	(SIGN_EXTEND_DATA_O),
-			.rs_i					(IF_ID_INST[25:21]),
-			.rt_i					(IF_ID_INST[20:16]),
-			.rd_i					(IF_ID_INST[15:11]),
+	.clk_i     (clk_i),
+	.wb_i      (MUX8_MUX8_O[7:6]),
+	.m_i     (MUX8_MUX8_O[5:4]),
+	.ex_i      (MUX8_MUX8_O[3:0]),
+	.add_pc_i      (IF_ID_PC), // no use anymore
+	.data1_i     (registerout1),
+	.data2_i     (registerout2),
+	.signextend_i      (SIGN_EXTEND_DATA_O),
+	.rs_i      (IF_ID_INST[25:21]),
+	.rt_i      (IF_ID_INST[20:16]),
+	.rd_i      (IF_ID_INST[15:11]),
 
-			.wb_o					(IDEX_WB_O), // go to ex/mem wb
-			.m_o					(IDEX_M_O), // go to ex/mem m
-			.ex_o					(IDEX_EX_O), // go to mux4 , Alu control , mux3
-			.data1_o			(IDEX_DATA1_O), // go to forward_mux6
-			.data2_o			(IDEX_DATA2_O), // go to forward_mux7
-			.signextend_o (IDEX_SIGNEXTEND_O), // go to mux4
-			.rs_o					(IDEX_RS_O), // go to forwarding
-			.rt_o					(IDEX_RT_O), // go to forwarding , mux3 , hazard
-			.rd_o					(IDEX_RD_O), // go to mux3
+	.wb_o      (IDEX_WB_O), // go to ex/mem wb
+	.m_o     (IDEX_M_O), // go to ex/mem m
+	.ex_o      (IDEX_EX_O), // go to mux4 , Alu control , mux3
+	.data1_o     (IDEX_DATA1_O), // go to forward_mux6
+	.data2_o     (IDEX_DATA2_O), // go to forward_mux7
+	.signextend_o      (IDEX_SIGNEXTEND_O), // go to mux4
+	.rs_o      (IDEX_RS_O), // go to forwarding
+	.rt_o      (IDEX_RT_O), // go to forwarding , mux3 , hazard
+	.rd_o      (IDEX_RD_O), // go to mux3
 
 
 );
@@ -139,16 +139,16 @@ IDEX IDEX(
 HD HD(
 		.IFID_rs_i	(IF_ID_INST[25:21]),
 		.IFID_rt_i	(IF_ID_INST[20:16]),
-		.IFID_o			(HD_IFID_O),	
+		.IFID_o			(HD_IFID_O),
 		.mux8_o 		(HD_MUX8_O),
 		.pc_o				(HD_PC_O)
 );
 
 Control Control(      //new control
-      .Op_i       (IF_ID_INST[31:26]),
-      .branch_o   (CONTROL_BRANCH_O)
-      .jump_o     (CONTROL_JUMP_O)
-			.mux8_o			(CONTROL_MUX8_O)
+    .Op_i       (IF_ID_INST[31:26]),
+    .branch_o   (CONTROL_BRANCH_O)
+    .jump_o     (CONTROL_JUMP_O)
+		.mux8_o			(CONTROL_MUX8_O)
 ); //DONE
 
 Adder Add_PC(
@@ -225,7 +225,7 @@ EQ EQ( // maybe wrong
     .data1_i    (registerout1),
     .data2_i    (registerout2),
     .data_o     (EQ_DATA_O)
-); //DONE 
+); //DONE
 
 Shift_left_2  Shift_left_2(
     .data_in    (SIGN_EXTEND_DATA_O),
@@ -246,10 +246,10 @@ PC PC(
     .rst_i      (rst_i),
     .start_i    (start_i),
 		.hazard_i		(HD_PC_O),
-		
+
     .pc_i       (MUX32_MUX2_O),
     .pc_o       (inst_addr)
-); 
+);
 
 Instruction_Memory Instruction_Memory(
     .addr_i     (inst_addr),

@@ -7,7 +7,7 @@ module MUX8
 );
 
 input [7:0] data1_i;
-input [31:0] data2_i;//no use
+input [7:0] data2_i;//no use
 input       select_i;
 output [7:0] data_o;
 reg [7:0] out;
@@ -16,7 +16,7 @@ assign data_o = out[7:0];
 always@(*) begin
   if(!select_i)
 		begin
-		  out = 8'd0;
+		  out = data2_i;
 		end
 	else
 	  begin

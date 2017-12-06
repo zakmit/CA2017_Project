@@ -14,16 +14,23 @@ module ALU_Control
    reg [2:0] 	ALUCtrl_o;
    
    
-   always @(*)begin
-      case(funct_i)
-	6'b100000:ALUCtrl_o = 3'b010;//add
-	6'b100010:ALUCtrl_o = 3'b110;//sub
-	6'b100100:ALUCtrl_o = 3'b000;//and
-	6'b100101:ALUCtrl_o = 3'b001;//or
-	6'b011000:ALUCtrl_o = 3'b100;//mul
-	default:ALUCtrl_o = 3'b010;	
-      endcase // case (ALUCtrl_o)
-   end
+always @(*)begin
+    if(ALUOp_i==2'b11)
+    begin
+        case(funct_i)
+	    6'b100000:ALUCtrl_o = 3'b010;//add
+	    6'b100010:ALUCtrl_o = 3'b110;//sub
+	    6'b100100:ALUCtrl_o = 3'b000;//and
+	    6'b100101:ALUCtrl_o = 3'b001;//or
+	    6'b011000:ALUCtrl_o = 3'b100;//mul
+	    default:ALUCtrl_o = 3'b010;	
+        endcase // case (ALUCtrl_o)
+    end
+	else
+	begin
+	    ALUCtrl_o=3'b010;
+	end
+end
    
    
    

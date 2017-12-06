@@ -1,16 +1,14 @@
 module CPU
-  (
+(
    clk_i,
-	 rst_i,
+   rst_i,
    start_i
-   );
+);
 
 // Ports
 input               clk_i;
-input               start_i;
 input               rst_i;
-
-wire [31:0] 	    inst_addr, inst;
+input               start_i;     
 
 //register
 wire [31:0] 	    registerout1;
@@ -112,6 +110,8 @@ wire [4:0] MEMWB_MUX3_O;
 
 //DATA_MEMORY
 wire [31:0] DATAMEMORY_READ_DATA_O;
+wire [31:0] inst_addr;
+wire [31:0] inst;
 
 IFID IFID(
   .clk_i          (clk_i),
@@ -281,7 +281,7 @@ FORWARD_MUX MUX7(
 
 MUX8 MUX8(
   .data1_i  (CONTROL_MUX8_O),
-  .data2_i  (32'd0), // default
+  .data2_i  (8'd0), // default
   .select_i (HD_MUX8_O),
   .data_o   (MUX8_MUX8_O)
 ); // ALL COMEPLETE

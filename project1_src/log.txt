@@ -1,0 +1,627 @@
+正在比較檔案 output.txt 和 FIBONACCI_OUTPUT.TXT
+***** output.txt
+cycle =           0, Start = 1, Stall =           1, Flush =           0
+PC =          0
+***** FIBONACCI_OUTPUT.TXT
+cycle =           0, Start = 0, Stall = 0, Flush = 0
+PC =          0
+*****
+
+***** output.txt
+
+cycle =           1, Start = 1, Stall =           2, Flush =           0
+PC =          0
+Registers
+***** FIBONACCI_OUTPUT.TXT
+
+cycle =           1, Start = 1, Stall = 0, Flush = 0
+PC =          4
+Registers
+*****
+
+***** output.txt
+
+cycle =           2, Start = 1, Stall =           3, Flush =           0
+PC =          0
+Registers
+***** FIBONACCI_OUTPUT.TXT
+
+cycle =           2, Start = 1, Stall = 0, Flush = 0
+PC =          8
+Registers
+*****
+
+***** output.txt
+
+cycle =           3, Start = 1, Stall =           4, Flush =           0
+PC =          0
+Registers
+***** FIBONACCI_OUTPUT.TXT
+
+cycle =           3, Start = 1, Stall = 0, Flush = 0
+PC =         12
+Registers
+*****
+
+***** output.txt
+
+cycle =           4, Start = 1, Stall =           5, Flush =           0
+PC =          0
+Registers
+***** FIBONACCI_OUTPUT.TXT
+
+cycle =           4, Start = 1, Stall = 0, Flush = 0
+PC =         16
+Registers
+*****
+
+***** output.txt
+
+cycle =           5, Start = 1, Stall =           6, Flush =           0
+PC =          0
+Registers
+***** FIBONACCI_OUTPUT.TXT
+
+cycle =           5, Start = 1, Stall = 0, Flush = 0
+PC =         20
+Registers
+*****
+
+***** output.txt
+
+cycle =           6, Start = 1, Stall =           7, Flush =           0
+PC =          0
+Registers
+***** FIBONACCI_OUTPUT.TXT
+
+cycle =           6, Start = 1, Stall = 0, Flush = 0
+PC =         24
+Registers
+*****
+
+***** output.txt
+
+cycle =           7, Start = 1, Stall =           8, Flush =           0
+PC =          0
+Registers
+***** FIBONACCI_OUTPUT.TXT
+
+cycle =           7, Start = 1, Stall = 0, Flush = 0
+PC =         28
+Registers
+*****
+
+***** output.txt
+R0(r0) =          0, R8 (t0) =          0, R16(s0) =          0, R24(t8) =          0
+R1(at) =          0, R9 (t1) =          0, R17(s1) =          0, R25(t9) =          0
+R2(v0) =          0, R10(t2) =          0, R18(s2) =          0, R26(k0) =          0
+***** FIBONACCI_OUTPUT.TXT
+R0(r0) =          0, R8 (t0) =          0, R16(s0) =          0, R24(t8) =          0
+R1(at) =          0, R9 (t1) =          1, R17(s1) =          0, R25(t9) =          0
+R2(v0) =          0, R10(t2) =          0, R18(s2) =          0, R26(k0) =          0
+*****
+
+***** output.txt
+
+cycle =           8, Start = 1, Stall =           9, Flush =           0
+PC =          0
+Registers
+***** FIBONACCI_OUTPUT.TXT
+
+cycle =           8, Start = 1, Stall = 1, Flush = 0
+PC =         28
+Registers
+*****
+
+***** output.txt
+R0(r0) =          0, R8 (t0) =          0, R16(s0) =          0, R24(t8) =          0
+R1(at) =          0, R9 (t1) =          0, R17(s1) =          0, R25(t9) =          0
+R2(v0) =          0, R10(t2) =          0, R18(s2) =          0, R26(k0) =          0
+***** FIBONACCI_OUTPUT.TXT
+R0(r0) =          0, R8 (t0) =          0, R16(s0) =          0, R24(t8) =          0
+R1(at) =          0, R9 (t1) =          1, R17(s1) =          0, R25(t9) =          0
+R2(v0) =          0, R10(t2) =          0, R18(s2) =          0, R26(k0) =          0
+*****
+
+***** output.txt
+
+cycle =           9, Start = 1, Stall =          10, Flush =           0
+PC =          0
+Registers
+***** FIBONACCI_OUTPUT.TXT
+
+cycle =           9, Start = 1, Stall = 1, Flush = 0
+PC =         32
+Registers
+*****
+
+***** output.txt
+R0(r0) =          0, R8 (t0) =          0, R16(s0) =          0, R24(t8) =          0
+R1(at) =          0, R9 (t1) =          0, R17(s1) =          0, R25(t9) =          0
+R2(v0) =          0, R10(t2) =          0, R18(s2) =          0, R26(k0) =          0
+R3(v1) =          0, R11(t3) =          0, R19(s3) =          0, R27(k1) =          0
+***** FIBONACCI_OUTPUT.TXT
+R0(r0) =          0, R8 (t0) =          0, R16(s0) =          0, R24(t8) =          0
+R1(at) =          0, R9 (t1) =          1, R17(s1) =          0, R25(t9) =          0
+R2(v0) =          0, R10(t2) =          0, R18(s2) =          1, R26(k0) =          0
+R3(v1) =          0, R11(t3) =          0, R19(s3) =          0, R27(k1) =          0
+*****
+
+***** output.txt
+
+cycle =          10, Start = 1, Stall =          11, Flush =           0
+PC =          0
+Registers
+R0(r0) =          0, R8 (t0) =          0, R16(s0) =          0, R24(t8) =          0
+R1(at) =          0, R9 (t1) =          0, R17(s1) =          0, R25(t9) =          0
+R2(v0) =          0, R10(t2) =          0, R18(s2) =          0, R26(k0) =          0
+R3(v1) =          0, R11(t3) =          0, R19(s3) =          0, R27(k1) =          0
+***** FIBONACCI_OUTPUT.TXT
+
+cycle =          10, Start = 1, Stall = 1, Flush = 0
+PC =         36
+Registers
+R0(r0) =          0, R8 (t0) =          0, R16(s0) =          5, R24(t8) =          0
+R1(at) =          0, R9 (t1) =          1, R17(s1) =          0, R25(t9) =          0
+R2(v0) =          0, R10(t2) =          0, R18(s2) =          1, R26(k0) =          0
+R3(v1) =          0, R11(t3) =          0, R19(s3) =          0, R27(k1) =          0
+*****
+
+***** output.txt
+
+cycle =          11, Start = 1, Stall =          12, Flush =           0
+PC =          0
+Registers
+R0(r0) =          0, R8 (t0) =          0, R16(s0) =          0, R24(t8) =          0
+R1(at) =          0, R9 (t1) =          0, R17(s1) =          0, R25(t9) =          0
+R2(v0) =          0, R10(t2) =          0, R18(s2) =          0, R26(k0) =          0
+R3(v1) =          0, R11(t3) =          0, R19(s3) =          0, R27(k1) =          0
+***** FIBONACCI_OUTPUT.TXT
+
+cycle =          11, Start = 1, Stall = 1, Flush = 0
+PC =         40
+Registers
+R0(r0) =          0, R8 (t0) =          0, R16(s0) =          5, R24(t8) =          0
+R1(at) =          0, R9 (t1) =          1, R17(s1) =          0, R25(t9) =          0
+R2(v0) =          0, R10(t2) =          0, R18(s2) =          1, R26(k0) =          0
+R3(v1) =          0, R11(t3) =          0, R19(s3) =          0, R27(k1) =          0
+*****
+
+***** output.txt
+
+cycle =          12, Start = 1, Stall =          13, Flush =           0
+PC =          0
+Registers
+R0(r0) =          0, R8 (t0) =          0, R16(s0) =          0, R24(t8) =          0
+R1(at) =          0, R9 (t1) =          0, R17(s1) =          0, R25(t9) =          0
+R2(v0) =          0, R10(t2) =          0, R18(s2) =          0, R26(k0) =          0
+R3(v1) =          0, R11(t3) =          0, R19(s3) =          0, R27(k1) =          0
+R4(a0) =          0, R12(t4) =          0, R20(s4) =          0, R28(gp) =          0
+R5(a1) =          0, R13(t5) =          0, R21(s5) =          0, R29(sp) =          0
+***** FIBONACCI_OUTPUT.TXT
+
+cycle =          12, Start = 1, Stall = 1, Flush = 0
+PC =         44
+Registers
+R0(r0) =          0, R8 (t0) =          0, R16(s0) =          5, R24(t8) =          0
+R1(at) =          0, R9 (t1) =          1, R17(s1) =          0, R25(t9) =          0
+R2(v0) =          0, R10(t2) =          0, R18(s2) =          1, R26(k0) =          0
+R3(v1) =          0, R11(t3) =          0, R19(s3) =          0, R27(k1) =          0
+R4(a0) =          0, R12(t4) =          0, R20(s4) =          5, R28(gp) =          0
+R5(a1) =          0, R13(t5) =          0, R21(s5) =          0, R29(sp) =          0
+*****
+
+***** output.txt
+
+cycle =          13, Start = 1, Stall =          14, Flush =           0
+PC =          0
+Registers
+R0(r0) =          0, R8 (t0) =          0, R16(s0) =          0, R24(t8) =          0
+R1(at) =          0, R9 (t1) =          0, R17(s1) =          0, R25(t9) =          0
+R2(v0) =          0, R10(t2) =          0, R18(s2) =          0, R26(k0) =          0
+R3(v1) =          0, R11(t3) =          0, R19(s3) =          0, R27(k1) =          0
+R4(a0) =          0, R12(t4) =          0, R20(s4) =          0, R28(gp) =          0
+R5(a1) =          0, R13(t5) =          0, R21(s5) =          0, R29(sp) =          0
+***** FIBONACCI_OUTPUT.TXT
+
+cycle =          13, Start = 1, Stall = 1, Flush = 0
+PC =         48
+Registers
+R0(r0) =          0, R8 (t0) =          0, R16(s0) =          4, R24(t8) =          0
+R1(at) =          0, R9 (t1) =          1, R17(s1) =          0, R25(t9) =          0
+R2(v0) =          0, R10(t2) =          0, R18(s2) =          1, R26(k0) =          0
+R3(v1) =          0, R11(t3) =          0, R19(s3) =          0, R27(k1) =          0
+R4(a0) =          0, R12(t4) =          0, R20(s4) =          5, R28(gp) =          0
+R5(a1) =          0, R13(t5) =          0, R21(s5) =          0, R29(sp) =          0
+*****
+
+***** output.txt
+
+cycle =          14, Start = 1, Stall =          15, Flush =           0
+PC =          0
+Registers
+R0(r0) =          0, R8 (t0) =          0, R16(s0) =          0, R24(t8) =          0
+R1(at) =          0, R9 (t1) =          0, R17(s1) =          0, R25(t9) =          0
+R2(v0) =          0, R10(t2) =          0, R18(s2) =          0, R26(k0) =          0
+R3(v1) =          0, R11(t3) =          0, R19(s3) =          0, R27(k1) =          0
+R4(a0) =          0, R12(t4) =          0, R20(s4) =          0, R28(gp) =          0
+R5(a1) =          0, R13(t5) =          0, R21(s5) =          0, R29(sp) =          0
+***** FIBONACCI_OUTPUT.TXT
+
+cycle =          14, Start = 1, Stall = 1, Flush = 0
+PC =         52
+Registers
+R0(r0) =          0, R8 (t0) =          0, R16(s0) =          4, R24(t8) =          0
+R1(at) =          0, R9 (t1) =          1, R17(s1) =          1, R25(t9) =          0
+R2(v0) =          0, R10(t2) =          0, R18(s2) =          1, R26(k0) =          0
+R3(v1) =          0, R11(t3) =          0, R19(s3) =          0, R27(k1) =          0
+R4(a0) =          0, R12(t4) =          0, R20(s4) =          5, R28(gp) =          0
+R5(a1) =          0, R13(t5) =          0, R21(s5) =          0, R29(sp) =          0
+*****
+
+***** output.txt
+
+cycle =          15, Start = 1, Stall =          16, Flush =           0
+PC =          0
+Registers
+R0(r0) =          0, R8 (t0) =          0, R16(s0) =          0, R24(t8) =          0
+R1(at) =          0, R9 (t1) =          0, R17(s1) =          0, R25(t9) =          0
+R2(v0) =          0, R10(t2) =          0, R18(s2) =          0, R26(k0) =          0
+R3(v1) =          0, R11(t3) =          0, R19(s3) =          0, R27(k1) =          0
+R4(a0) =          0, R12(t4) =          0, R20(s4) =          0, R28(gp) =          0
+R5(a1) =          0, R13(t5) =          0, R21(s5) =          0, R29(sp) =          0
+***** FIBONACCI_OUTPUT.TXT
+
+cycle =          15, Start = 1, Stall = 1, Flush = 0
+PC =         56
+Registers
+R0(r0) =          0, R8 (t0) =          0, R16(s0) =          4, R24(t8) =          0
+R1(at) =          0, R9 (t1) =          1, R17(s1) =          1, R25(t9) =          0
+R2(v0) =          0, R10(t2) =          0, R18(s2) =          1, R26(k0) =          0
+R3(v1) =          0, R11(t3) =          0, R19(s3) =          1, R27(k1) =          0
+R4(a0) =          0, R12(t4) =          0, R20(s4) =          5, R28(gp) =          0
+R5(a1) =          0, R13(t5) =          0, R21(s5) =          0, R29(sp) =          0
+*****
+
+***** output.txt
+
+cycle =          16, Start = 1, Stall =          17, Flush =           0
+PC =          0
+Registers
+R0(r0) =          0, R8 (t0) =          0, R16(s0) =          0, R24(t8) =          0
+R1(at) =          0, R9 (t1) =          0, R17(s1) =          0, R25(t9) =          0
+R2(v0) =          0, R10(t2) =          0, R18(s2) =          0, R26(k0) =          0
+R3(v1) =          0, R11(t3) =          0, R19(s3) =          0, R27(k1) =          0
+R4(a0) =          0, R12(t4) =          0, R20(s4) =          0, R28(gp) =          0
+R5(a1) =          0, R13(t5) =          0, R21(s5) =          0, R29(sp) =          0
+***** FIBONACCI_OUTPUT.TXT
+
+cycle =          16, Start = 1, Stall = 1, Flush = 1
+PC =         28
+Registers
+R0(r0) =          0, R8 (t0) =          0, R16(s0) =          4, R24(t8) =          0
+R1(at) =          0, R9 (t1) =          1, R17(s1) =          1, R25(t9) =          0
+R2(v0) =          0, R10(t2) =          0, R18(s2) =          1, R26(k0) =          0
+R3(v1) =          0, R11(t3) =          0, R19(s3) =          1, R27(k1) =          0
+R4(a0) =          0, R12(t4) =          0, R20(s4) =          5, R28(gp) =          0
+R5(a1) =          0, R13(t5) =          0, R21(s5) =          0, R29(sp) =          0
+*****
+
+***** output.txt
+
+cycle =          17, Start = 1, Stall =          18, Flush =           0
+PC =          0
+Registers
+R0(r0) =          0, R8 (t0) =          0, R16(s0) =          0, R24(t8) =          0
+R1(at) =          0, R9 (t1) =          0, R17(s1) =          0, R25(t9) =          0
+R2(v0) =          0, R10(t2) =          0, R18(s2) =          0, R26(k0) =          0
+R3(v1) =          0, R11(t3) =          0, R19(s3) =          0, R27(k1) =          0
+R4(a0) =          0, R12(t4) =          0, R20(s4) =          0, R28(gp) =          0
+R5(a1) =          0, R13(t5) =          0, R21(s5) =          0, R29(sp) =          0
+***** FIBONACCI_OUTPUT.TXT
+
+cycle =          17, Start = 1, Stall = 1, Flush = 1
+PC =         32
+Registers
+R0(r0) =          0, R8 (t0) =          0, R16(s0) =          4, R24(t8) =          0
+R1(at) =          0, R9 (t1) =          1, R17(s1) =          1, R25(t9) =          0
+R2(v0) =          0, R10(t2) =          0, R18(s2) =          1, R26(k0) =          0
+R3(v1) =          0, R11(t3) =          0, R19(s3) =          1, R27(k1) =          0
+R4(a0) =          0, R12(t4) =          0, R20(s4) =          5, R28(gp) =          0
+R5(a1) =          0, R13(t5) =          0, R21(s5) =          0, R29(sp) =          0
+*****
+
+***** output.txt
+
+cycle =          18, Start = 1, Stall =          19, Flush =           0
+PC =          0
+Registers
+R0(r0) =          0, R8 (t0) =          0, R16(s0) =          0, R24(t8) =          0
+R1(at) =          0, R9 (t1) =          0, R17(s1) =          0, R25(t9) =          0
+R2(v0) =          0, R10(t2) =          0, R18(s2) =          0, R26(k0) =          0
+R3(v1) =          0, R11(t3) =          0, R19(s3) =          0, R27(k1) =          0
+R4(a0) =          0, R12(t4) =          0, R20(s4) =          0, R28(gp) =          0
+R5(a1) =          0, R13(t5) =          0, R21(s5) =          0, R29(sp) =          0
+***** FIBONACCI_OUTPUT.TXT
+
+cycle =          18, Start = 1, Stall = 1, Flush = 1
+PC =         36
+Registers
+R0(r0) =          0, R8 (t0) =          0, R16(s0) =          4, R24(t8) =          0
+R1(at) =          0, R9 (t1) =          1, R17(s1) =          1, R25(t9) =          0
+R2(v0) =          0, R10(t2) =          0, R18(s2) =          1, R26(k0) =          0
+R3(v1) =          0, R11(t3) =          0, R19(s3) =          1, R27(k1) =          0
+R4(a0) =          0, R12(t4) =          0, R20(s4) =          5, R28(gp) =          0
+R5(a1) =          0, R13(t5) =          0, R21(s5) =          0, R29(sp) =          0
+*****
+
+***** output.txt
+
+cycle =          19, Start = 1, Stall =          20, Flush =           0
+PC =          0
+Registers
+R0(r0) =          0, R8 (t0) =          0, R16(s0) =          0, R24(t8) =          0
+R1(at) =          0, R9 (t1) =          0, R17(s1) =          0, R25(t9) =          0
+R2(v0) =          0, R10(t2) =          0, R18(s2) =          0, R26(k0) =          0
+R3(v1) =          0, R11(t3) =          0, R19(s3) =          0, R27(k1) =          0
+R4(a0) =          0, R12(t4) =          0, R20(s4) =          0, R28(gp) =          0
+R5(a1) =          0, R13(t5) =          0, R21(s5) =          0, R29(sp) =          0
+***** FIBONACCI_OUTPUT.TXT
+
+cycle =          19, Start = 1, Stall = 1, Flush = 1
+PC =         40
+Registers
+R0(r0) =          0, R8 (t0) =          0, R16(s0) =          4, R24(t8) =          0
+R1(at) =          0, R9 (t1) =          1, R17(s1) =          1, R25(t9) =          0
+R2(v0) =          0, R10(t2) =          0, R18(s2) =          1, R26(k0) =          0
+R3(v1) =          0, R11(t3) =          0, R19(s3) =          1, R27(k1) =          0
+R4(a0) =          0, R12(t4) =          0, R20(s4) =          5, R28(gp) =          0
+R5(a1) =          0, R13(t5) =          0, R21(s5) =          0, R29(sp) =          0
+*****
+
+***** output.txt
+
+cycle =          20, Start = 1, Stall =          21, Flush =           0
+PC =          0
+Registers
+R0(r0) =          0, R8 (t0) =          0, R16(s0) =          0, R24(t8) =          0
+R1(at) =          0, R9 (t1) =          0, R17(s1) =          0, R25(t9) =          0
+R2(v0) =          0, R10(t2) =          0, R18(s2) =          0, R26(k0) =          0
+R3(v1) =          0, R11(t3) =          0, R19(s3) =          0, R27(k1) =          0
+R4(a0) =          0, R12(t4) =          0, R20(s4) =          0, R28(gp) =          0
+R5(a1) =          0, R13(t5) =          0, R21(s5) =          0, R29(sp) =          0
+***** FIBONACCI_OUTPUT.TXT
+
+cycle =          20, Start = 1, Stall = 1, Flush = 1
+PC =         44
+Registers
+R0(r0) =          0, R8 (t0) =          0, R16(s0) =          4, R24(t8) =          0
+R1(at) =          0, R9 (t1) =          1, R17(s1) =          1, R25(t9) =          0
+R2(v0) =          0, R10(t2) =          0, R18(s2) =          1, R26(k0) =          0
+R3(v1) =          0, R11(t3) =          0, R19(s3) =          1, R27(k1) =          0
+R4(a0) =          0, R12(t4) =          0, R20(s4) =          5, R28(gp) =          0
+R5(a1) =          0, R13(t5) =          0, R21(s5) =          0, R29(sp) =          0
+*****
+
+***** output.txt
+
+cycle =          21, Start = 1, Stall =          22, Flush =           0
+PC =          0
+Registers
+R0(r0) =          0, R8 (t0) =          0, R16(s0) =          0, R24(t8) =          0
+R1(at) =          0, R9 (t1) =          0, R17(s1) =          0, R25(t9) =          0
+R2(v0) =          0, R10(t2) =          0, R18(s2) =          0, R26(k0) =          0
+R3(v1) =          0, R11(t3) =          0, R19(s3) =          0, R27(k1) =          0
+R4(a0) =          0, R12(t4) =          0, R20(s4) =          0, R28(gp) =          0
+R5(a1) =          0, R13(t5) =          0, R21(s5) =          0, R29(sp) =          0
+***** FIBONACCI_OUTPUT.TXT
+
+cycle =          21, Start = 1, Stall = 1, Flush = 1
+PC =         48
+Registers
+R0(r0) =          0, R8 (t0) =          0, R16(s0) =          3, R24(t8) =          0
+R1(at) =          0, R9 (t1) =          1, R17(s1) =          1, R25(t9) =          0
+R2(v0) =          0, R10(t2) =          0, R18(s2) =          1, R26(k0) =          0
+R3(v1) =          0, R11(t3) =          0, R19(s3) =          1, R27(k1) =          0
+R4(a0) =          0, R12(t4) =          0, R20(s4) =          5, R28(gp) =          0
+R5(a1) =          0, R13(t5) =          0, R21(s5) =          0, R29(sp) =          0
+*****
+
+***** output.txt
+
+cycle =          22, Start = 1, Stall =          23, Flush =           0
+PC =          0
+Registers
+R0(r0) =          0, R8 (t0) =          0, R16(s0) =          0, R24(t8) =          0
+R1(at) =          0, R9 (t1) =          0, R17(s1) =          0, R25(t9) =          0
+R2(v0) =          0, R10(t2) =          0, R18(s2) =          0, R26(k0) =          0
+R3(v1) =          0, R11(t3) =          0, R19(s3) =          0, R27(k1) =          0
+R4(a0) =          0, R12(t4) =          0, R20(s4) =          0, R28(gp) =          0
+R5(a1) =          0, R13(t5) =          0, R21(s5) =          0, R29(sp) =          0
+***** FIBONACCI_OUTPUT.TXT
+
+cycle =          22, Start = 1, Stall = 1, Flush = 1
+PC =         52
+Registers
+R0(r0) =          0, R8 (t0) =          0, R16(s0) =          3, R24(t8) =          0
+R1(at) =          0, R9 (t1) =          1, R17(s1) =          2, R25(t9) =          0
+R2(v0) =          0, R10(t2) =          0, R18(s2) =          1, R26(k0) =          0
+R3(v1) =          0, R11(t3) =          0, R19(s3) =          1, R27(k1) =          0
+R4(a0) =          0, R12(t4) =          0, R20(s4) =          5, R28(gp) =          0
+R5(a1) =          0, R13(t5) =          0, R21(s5) =          0, R29(sp) =          0
+*****
+
+***** output.txt
+
+cycle =          23, Start = 1, Stall =          24, Flush =           0
+PC =          0
+Registers
+R0(r0) =          0, R8 (t0) =          0, R16(s0) =          0, R24(t8) =          0
+R1(at) =          0, R9 (t1) =          0, R17(s1) =          0, R25(t9) =          0
+R2(v0) =          0, R10(t2) =          0, R18(s2) =          0, R26(k0) =          0
+R3(v1) =          0, R11(t3) =          0, R19(s3) =          0, R27(k1) =          0
+R4(a0) =          0, R12(t4) =          0, R20(s4) =          0, R28(gp) =          0
+R5(a1) =          0, R13(t5) =          0, R21(s5) =          0, R29(sp) =          0
+***** FIBONACCI_OUTPUT.TXT
+
+cycle =          23, Start = 1, Stall = 1, Flush = 1
+PC =         56
+Registers
+R0(r0) =          0, R8 (t0) =          0, R16(s0) =          3, R24(t8) =          0
+R1(at) =          0, R9 (t1) =          1, R17(s1) =          2, R25(t9) =          0
+R2(v0) =          0, R10(t2) =          0, R18(s2) =          1, R26(k0) =          0
+R3(v1) =          0, R11(t3) =          0, R19(s3) =          1, R27(k1) =          0
+R4(a0) =          0, R12(t4) =          0, R20(s4) =          5, R28(gp) =          0
+R5(a1) =          0, R13(t5) =          0, R21(s5) =          0, R29(sp) =          0
+*****
+
+***** output.txt
+
+cycle =          24, Start = 1, Stall =          25, Flush =           0
+PC =          0
+Registers
+R0(r0) =          0, R8 (t0) =          0, R16(s0) =          0, R24(t8) =          0
+R1(at) =          0, R9 (t1) =          0, R17(s1) =          0, R25(t9) =          0
+R2(v0) =          0, R10(t2) =          0, R18(s2) =          0, R26(k0) =          0
+R3(v1) =          0, R11(t3) =          0, R19(s3) =          0, R27(k1) =          0
+R4(a0) =          0, R12(t4) =          0, R20(s4) =          0, R28(gp) =          0
+R5(a1) =          0, R13(t5) =          0, R21(s5) =          0, R29(sp) =          0
+***** FIBONACCI_OUTPUT.TXT
+
+cycle =          24, Start = 1, Stall = 1, Flush = 2
+PC =         28
+Registers
+R0(r0) =          0, R8 (t0) =          0, R16(s0) =          3, R24(t8) =          0
+R1(at) =          0, R9 (t1) =          1, R17(s1) =          2, R25(t9) =          0
+R2(v0) =          0, R10(t2) =          0, R18(s2) =          2, R26(k0) =          0
+R3(v1) =          0, R11(t3) =          0, R19(s3) =          1, R27(k1) =          0
+R4(a0) =          0, R12(t4) =          0, R20(s4) =          5, R28(gp) =          0
+R5(a1) =          0, R13(t5) =          0, R21(s5) =          0, R29(sp) =          0
+*****
+
+***** output.txt
+
+cycle =          25, Start = 1, Stall =          26, Flush =           0
+PC =          0
+Registers
+R0(r0) =          0, R8 (t0) =          0, R16(s0) =          0, R24(t8) =          0
+R1(at) =          0, R9 (t1) =          0, R17(s1) =          0, R25(t9) =          0
+R2(v0) =          0, R10(t2) =          0, R18(s2) =          0, R26(k0) =          0
+R3(v1) =          0, R11(t3) =          0, R19(s3) =          0, R27(k1) =          0
+R4(a0) =          0, R12(t4) =          0, R20(s4) =          0, R28(gp) =          0
+R5(a1) =          0, R13(t5) =          0, R21(s5) =          0, R29(sp) =          0
+***** FIBONACCI_OUTPUT.TXT
+
+cycle =          25, Start = 1, Stall = 1, Flush = 2
+PC =         32
+Registers
+R0(r0) =          0, R8 (t0) =          0, R16(s0) =          3, R24(t8) =          0
+R1(at) =          0, R9 (t1) =          1, R17(s1) =          1, R25(t9) =          0
+R2(v0) =          0, R10(t2) =          0, R18(s2) =          2, R26(k0) =          0
+R3(v1) =          0, R11(t3) =          0, R19(s3) =          1, R27(k1) =          0
+R4(a0) =          0, R12(t4) =          0, R20(s4) =          5, R28(gp) =          0
+R5(a1) =          0, R13(t5) =          0, R21(s5) =          0, R29(sp) =          0
+*****
+
+***** output.txt
+
+cycle =          26, Start = 1, Stall =          27, Flush =           0
+PC =          0
+Registers
+R0(r0) =          0, R8 (t0) =          0, R16(s0) =          0, R24(t8) =          0
+R1(at) =          0, R9 (t1) =          0, R17(s1) =          0, R25(t9) =          0
+R2(v0) =          0, R10(t2) =          0, R18(s2) =          0, R26(k0) =          0
+R3(v1) =          0, R11(t3) =          0, R19(s3) =          0, R27(k1) =          0
+R4(a0) =          0, R12(t4) =          0, R20(s4) =          0, R28(gp) =          0
+R5(a1) =          0, R13(t5) =          0, R21(s5) =          0, R29(sp) =          0
+***** FIBONACCI_OUTPUT.TXT
+
+cycle =          26, Start = 1, Stall = 1, Flush = 2
+PC =         36
+Registers
+R0(r0) =          0, R8 (t0) =          0, R16(s0) =          3, R24(t8) =          0
+R1(at) =          0, R9 (t1) =          1, R17(s1) =          1, R25(t9) =          0
+R2(v0) =          0, R10(t2) =          0, R18(s2) =          2, R26(k0) =          0
+R3(v1) =          0, R11(t3) =          0, R19(s3) =          1, R27(k1) =          0
+R4(a0) =          0, R12(t4) =          0, R20(s4) =          5, R28(gp) =          0
+R5(a1) =          0, R13(t5) =          0, R21(s5) =          0, R29(sp) =          0
+*****
+
+***** output.txt
+
+cycle =          27, Start = 1, Stall =          28, Flush =           0
+PC =          0
+Registers
+R0(r0) =          0, R8 (t0) =          0, R16(s0) =          0, R24(t8) =          0
+R1(at) =          0, R9 (t1) =          0, R17(s1) =          0, R25(t9) =          0
+R2(v0) =          0, R10(t2) =          0, R18(s2) =          0, R26(k0) =          0
+R3(v1) =          0, R11(t3) =          0, R19(s3) =          0, R27(k1) =          0
+R4(a0) =          0, R12(t4) =          0, R20(s4) =          0, R28(gp) =          0
+R5(a1) =          0, R13(t5) =          0, R21(s5) =          0, R29(sp) =          0
+***** FIBONACCI_OUTPUT.TXT
+
+cycle =          27, Start = 1, Stall = 1, Flush = 2
+PC =         40
+Registers
+R0(r0) =          0, R8 (t0) =          0, R16(s0) =          3, R24(t8) =          0
+R1(at) =          0, R9 (t1) =          1, R17(s1) =          1, R25(t9) =          0
+R2(v0) =          0, R10(t2) =          0, R18(s2) =          2, R26(k0) =          0
+R3(v1) =          0, R11(t3) =          0, R19(s3) =          1, R27(k1) =          0
+R4(a0) =          0, R12(t4) =          0, R20(s4) =          5, R28(gp) =          0
+R5(a1) =          0, R13(t5) =          0, R21(s5) =          0, R29(sp) =          0
+*****
+
+***** output.txt
+
+cycle =          28, Start = 1, Stall =          29, Flush =           0
+PC =          0
+Registers
+R0(r0) =          0, R8 (t0) =          0, R16(s0) =          0, R24(t8) =          0
+R1(at) =          0, R9 (t1) =          0, R17(s1) =          0, R25(t9) =          0
+R2(v0) =          0, R10(t2) =          0, R18(s2) =          0, R26(k0) =          0
+R3(v1) =          0, R11(t3) =          0, R19(s3) =          0, R27(k1) =          0
+R4(a0) =          0, R12(t4) =          0, R20(s4) =          0, R28(gp) =          0
+R5(a1) =          0, R13(t5) =          0, R21(s5) =          0, R29(sp) =          0
+***** FIBONACCI_OUTPUT.TXT
+
+cycle =          28, Start = 1, Stall = 1, Flush = 2
+PC =         44
+Registers
+R0(r0) =          0, R8 (t0) =          0, R16(s0) =          3, R24(t8) =          0
+R1(at) =          0, R9 (t1) =          1, R17(s1) =          1, R25(t9) =          0
+R2(v0) =          0, R10(t2) =          0, R18(s2) =          2, R26(k0) =          0
+R3(v1) =          0, R11(t3) =          0, R19(s3) =          1, R27(k1) =          0
+R4(a0) =          0, R12(t4) =          0, R20(s4) =          5, R28(gp) =          0
+R5(a1) =          0, R13(t5) =          0, R21(s5) =          0, R29(sp) =          0
+*****
+
+***** output.txt
+
+cycle =          29, Start = 1, Stall =          30, Flush =           0
+PC =          0
+Registers
+R0(r0) =          0, R8 (t0) =          0, R16(s0) =          0, R24(t8) =          0
+R1(at) =          0, R9 (t1) =          0, R17(s1) =          0, R25(t9) =          0
+R2(v0) =          0, R10(t2) =          0, R18(s2) =          0, R26(k0) =          0
+R3(v1) =          0, R11(t3) =          0, R19(s3) =          0, R27(k1) =          0
+R4(a0) =          0, R12(t4) =          0, R20(s4) =          0, R28(gp) =          0
+R5(a1) =          0, R13(t5) =          0, R21(s5) =          0, R29(sp) =          0
+***** FIBONACCI_OUTPUT.TXT
+
+cycle =          29, Start = 1, Stall = 1, Flush = 2
+PC =         48
+Registers
+R0(r0) =          0, R8 (t0) =          0, R16(s0) =          2, R24(t8) =          0
+R1(at) =          0, R9 (t1) =          1, R17(s1) =          1, R25(t9) =          0
+R2(v0) =          0, R10(t2) =          0, R18(s2) =          2, R26(k0) =          0
+R3(v1) =          0, R11(t3) =          0, R19(s3) =          1, R27(k1) =          0
+R4(a0) =          0, R12(t4) =          0, R20(s4) =          5, R28(gp) =          0
+R5(a1) =          0, R13(t5) =          0, R21(s5) =          0, R29(sp) =          0
+*****
+
+***** output.txt
+
+
+***** FIBONACCI_OUTPUT.TXT
+*****
+

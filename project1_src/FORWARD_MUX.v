@@ -22,7 +22,8 @@ always@(*)begin
   case(select_i)
 		2'b00: out = data_i;
 		2'b10: out = exmem_i;
-		default: out = memwb_i;
+		2'b01: out = memwb_i;
+        default: out = data_i;
 	endcase
 end
 

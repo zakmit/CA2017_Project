@@ -180,8 +180,8 @@ MEMWB MEMWB(
 DATAMEMORY DATAMEMORY(
   .exmem_alu_i    (EXMEM_ALU_O),
 	.exmem_mux7_i   (EXMEM_MUX7_O),
-	.exmem_m_MW_i   (EXMEM_M_O[1]), //MemWrite
-	.exmem_m_MR_i   (EXMEM_M_O[0]), //MemRead
+	.exmem_m_MW_i   (EXMEM_M_O[0]), //MemWrite
+	.exmem_m_MR_i   (EXMEM_M_O[1]), //MemRead
 
 	.read_data_o    (DATAMEMORY_READ_DATA_O)
 
@@ -267,7 +267,7 @@ MUX32 MUX5(
 
 FORWARD_MUX MUX6(
   .data_i           (IDEX_DATA1_O),
-  .select_i         (FORWARDUNIT_MUX7_O), // from forward unit
+  .select_i         (FORWARDUNIT_MUX6_O), // from forward unit
   .exmem_i          (EXMEM_ALU_O),
   .memwb_i          (MUX32_MUX5_O),
   .data_o           (MUX6_DATA_O)

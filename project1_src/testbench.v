@@ -12,7 +12,7 @@ always #(`CYCLE_TIME/2) Clk = ~Clk;
 
 CPU CPU(
     .clk_i  (Clk),
-		.rst_i  (Reset),
+	.rst_i  (Reset),
     .start_i(Start)
 );
   
@@ -27,9 +27,9 @@ initial begin
     end
     
     // initialize data memory
-		for(i=0; i<32 ; i=i+1) begin
-		    CPU.DATAMEMORY.out[i] = 8'b0;
-		end
+    for(i=0; i<32; i=i+1) begin
+		CPU.DATAMEMORY.out[i] = 8'b0;
+	end
 		
 		// initialize Register File
     for(i=0; i<32; i=i+1) begin
@@ -43,7 +43,7 @@ initial begin
     outfile = $fopen("output.txt") | 1;
     
 		// Set Input n into data memory at 0x00
-		CPU.DATAMEMORY.out[0] = 8'h5;
+    CPU.DATAMEMORY.out[0] = 8'h5;       // n = 5 for example
 
     Clk = 1;
     Reset = 0;
@@ -57,20 +57,15 @@ initial begin
 end
   
 always@(posedge Clk) begin
-    if(counter == 20)    // stop after 30 cycles
+    if(counter == 30)    // stop after 30 cycles
         $stop;
   
 		// put in your own signal to count stall and flush
 		if(CPU.HD.mux8_o == 0 && CPU.Control.jump_o == 0 && CPU.Control.branch_o == 0 )stall = stall +1;
 		if((CPU.Control.jump_o ) || (CPU.Control.branch_o && CPU.EQ.data_o))flush = flush+1;
 
-
-		// printf cycle counts   cpu start   pipeline stall   pipeline flush
-		$fdisplay(outfile,"cycle = %d, Start = %d, Stall = %d, Flush = %d", counter, Start, stall, flush);
-	
-
     // print PC
-    $fdisplay(outfile, "PC = %d", CPU.PC.pc_o);
+    $fdisplay(outfile, "cycle = %d, Start = %d, Stall = %d, Flush = %d\nPC = %d", counter, Start, stall, flush, CPU.PC.pc_o);
     
     // print Registers
     $fdisplay(outfile, "Registers");
@@ -83,19 +78,21 @@ always@(posedge Clk) begin
     $fdisplay(outfile, "R6(a2) = %d, R14(t6) = %d, R22(s6) = %d, R30(s8) = %d", CPU.Registers.register[6], CPU.Registers.register[14], CPU.Registers.register[22], CPU.Registers.register[30]);
     $fdisplay(outfile, "R7(a3) = %d, R15(t7) = %d, R23(s7) = %d, R31(ra) = %d", CPU.Registers.register[7], CPU.Registers.register[15], CPU.Registers.register[23], CPU.Registers.register[31]);
    
-
-    $fdisplay(outfile, "Data Memory: 0x00 = %d" , {CPU.DATAMEMORY.out[3] , CPU.DATAMEMORY.out[2] , CPU.DATAMEMORY.out[1] , CPU.DATAMEMORY.out[0]} );
-    $fdisplay(outfile, "Data Memory: 0x04 = %d" , {CPU.DATAMEMORY.out[7] , CPU.DATAMEMORY.out[6] , CPU.DATAMEMORY.out[5] , CPU.DATAMEMORY.out[4]} );
-    $fdisplay(outfile, "Data Memory: 0x08 = %d" , {CPU.DATAMEMORY.out[11] , CPU.DATAMEMORY.out[10] , CPU.DATAMEMORY.out[9] , CPU.DATAMEMORY.out[8]} );
-    $fdisplay(outfile, "Data Memory: 0x0c = %d" , {CPU.DATAMEMORY.out[15] , CPU.DATAMEMORY.out[14] , CPU.DATAMEMORY.out[13] , CPU.DATAMEMORY.out[12]} );
-    $fdisplay(outfile, "Data Memory: 0x10 = %d" , {CPU.DATAMEMORY.out[19] , CPU.DATAMEMORY.out[18] , CPU.DATAMEMORY.out[17] , CPU.DATAMEMORY.out[16]} );
-    $fdisplay(outfile, "Data Memory: 0x14 = %d" , {CPU.DATAMEMORY.out[23] , CPU.DATAMEMORY.out[22] , CPU.DATAMEMORY.out[21] , CPU.DATAMEMORY.out[20]} );
-    $fdisplay(outfile, "Data Memory: 0x18 = %d" , {CPU.DATAMEMORY.out[27] , CPU.DATAMEMORY.out[26] , CPU.DATAMEMORY.out[25] , CPU.DATAMEMORY.out[24]} );
-    $fdisplay(outfile, "Data Memory: 0x1c = %d" , {CPU.DATAMEMORY.out[31] , CPU.DATAMEMORY.out[30] , CPU.DATAMEMORY.out[29] , CPU.DATAMEMORY.out[28]} );
+    // print Data Memory
+    $fdisplay(outfile, "Data Memory: 0x00 = %d", {CPU.DATAMEMORY.out[3] , CPU.DATAMEMORY.out[2] , CPU.DATAMEMORY.out[1] , CPU.DATAMEMORY.out[0] });
+    $fdisplay(outfile, "Data Memory: 0x04 = %d", {CPU.DATAMEMORY.out[7] , CPU.DATAMEMORY.out[6] , CPU.DATAMEMORY.out[5] , CPU.DATAMEMORY.out[4] });
+    $fdisplay(outfile, "Data Memory: 0x08 = %d", {CPU.DATAMEMORY.out[11], CPU.DATAMEMORY.out[10], CPU.DATAMEMORY.out[9] , CPU.DATAMEMORY.out[8] });
+    $fdisplay(outfile, "Data Memory: 0x0c = %d", {CPU.DATAMEMORY.out[15], CPU.DATAMEMORY.out[14], CPU.DATAMEMORY.out[13], CPU.DATAMEMORY.out[12]});
+    $fdisplay(outfile, "Data Memory: 0x10 = %d", {CPU.DATAMEMORY.out[19], CPU.DATAMEMORY.out[18], CPU.DATAMEMORY.out[17], CPU.DATAMEMORY.out[16]});
+    $fdisplay(outfile, "Data Memory: 0x14 = %d", {CPU.DATAMEMORY.out[23], CPU.DATAMEMORY.out[22], CPU.DATAMEMORY.out[21], CPU.DATAMEMORY.out[20]});
+    $fdisplay(outfile, "Data Memory: 0x18 = %d", {CPU.DATAMEMORY.out[27], CPU.DATAMEMORY.out[26], CPU.DATAMEMORY.out[25], CPU.DATAMEMORY.out[24]});
+    $fdisplay(outfile, "Data Memory: 0x1c = %d", {CPU.DATAMEMORY.out[31], CPU.DATAMEMORY.out[30], CPU.DATAMEMORY.out[29], CPU.DATAMEMORY.out[28]});
 
     $fdisplay(outfile, "\n");
     
     counter = counter + 1;
+    
+      
 end
 
   

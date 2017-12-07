@@ -173,7 +173,7 @@ MEMWB MEMWB(
 	.wb_o        (MEMWB_WB_O), //go to mux5, forwarding unit , register(RegWritte)
 	.read_data_o (MEMWB_READ_DATA_O),//go to mux5
 	.alu_o       (MEMWB_ALU_O),//go to mux5
-	.mux3_o      (MEMWB_MUX3_O)//go to forwarding
+	.mux3_o      (MEMWB_MUX3_O)//go o forwarding , Register
 
 );//ALL COMPLETE
 
@@ -257,10 +257,10 @@ MUX32 MUX4(
 );//ALL COMPLETE
 
 MUX32 MUX5(
-		.data1_i  (MEMWB_READ_DATA_O),
-		.data2_i  (MEMWB_ALU_O),
-  //.data1_i  (MEMWB_ALU_O), // select_i == 0 , this
-  //.data2_i  (MEMWB_READ_DATA_O),// select_i == 1 , this
+		//.data1_i  (MEMWB_READ_DATA_O),
+		//.data2_i  (MEMWB_ALU_O),
+  .data1_i  (MEMWB_ALU_O), // select_i == 0 , this
+  .data2_i  (MEMWB_READ_DATA_O),// select_i == 1 , this
   .select_i (MEMWB_WB_O[0]),
   .data_o   (MUX32_MUX5_O)
 ); //ALL COMPLETE
@@ -327,7 +327,7 @@ Registers Registers(
   .clk_i      (clk_i),
   .RSaddr_i   (IF_ID_INST[25:21]),
   .RTaddr_i   (IF_ID_INST[20:16]),
-  .RDaddr_i   (MEM_WB_RD), // 5bit [4:0]
+  .RDaddr_i   (MEMWB_MUX3_O), // 5bit [4:0]
   .RDdata_i   (MUX32_MUX5_O),
   .RegWrite_i (MEMWB_WB_O[1]),
   .RSdata_o   (registerout1), // registerout1 and 2 maybe wrong

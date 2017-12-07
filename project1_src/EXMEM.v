@@ -47,7 +47,7 @@ always@(posedge clk_i) begin
 		m_o  <= m_i;
 		alu_o <= alu_i;
 		mux7_o <= mux7_i;
-		mux3_o <= mux3_o;
+		mux3_o <= mux3_i;
 end
 
 endmodule

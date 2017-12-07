@@ -26,6 +26,10 @@ initial begin #5
 	 inst_o = 0;
 end
 
+//always@(posedge clk_i) begin
+//			  pc_o <= add_pc_i;
+//				inst_o <= instruction_i;
+//end
 always@(posedge clk_i) begin
     if( flush_i )
 	    begin

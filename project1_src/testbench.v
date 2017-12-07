@@ -17,6 +17,9 @@ CPU CPU(
 );
   
 initial begin
+		$dumpfile("my_dump.vcd");
+		$dumpvars;
+
     counter = 0;
    	stall = 0;
 		flush = 0;
@@ -57,7 +60,7 @@ initial begin
 end
   
 always@(posedge Clk) begin
-    if(counter == 30)    // stop after 30 cycles
+    if(counter == 12)    // stop after 30 cycles
         $stop;
   
 		// put in your own signal to count stall and flush

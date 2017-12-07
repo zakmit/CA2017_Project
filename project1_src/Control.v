@@ -16,6 +16,8 @@ module Control
 	 assign jump_o = out[9];
 	 assign branch_o = out[8];
 	 assign mux8_o = out[7:0];
+	 //[9]      [8]
+	 //jump     branch_o
 	 //[7]      [6]      [5]     [4]     
 	 //RegWrite MemtoReg MemRead MemWrite
    //[3]    [2]   [1]   [0]

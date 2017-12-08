@@ -31,16 +31,19 @@ end
 //				inst_o <= instruction_i;
 //end
 always@(posedge clk_i) begin
+    pc_o <= add_pc_i;
     if( flush_i )
 	    begin
-		    pc_o <= 0;
 		  	inst_o <= 0;
 		  end
 		else if( hazard_i )
-		  begin
-			  pc_o <= add_pc_i;
+		  begin 
 				inst_o <= instruction_i;
 			end
+            else
+            begin
+                inst_o <= inst_o;
+            end
 end
 
 endmodule

@@ -52,20 +52,19 @@ initial begin
     Reset = 0;
     Start = 0;
     
-    #(`CYCLE_TIME/4) 
+    #(`CYCLE_TIME) 
     Reset = 1;
     Start = 1;
         
     
 end
   
-always@(posedge Clk) begin
+always@(negedge Clk) begin
     if(counter == 30)    // stop after 30 cycles
         $stop;
   
 		// put in your own signal to count stall and flush
-		if(CPU.HD.mux8_o == 0 && CPU.Control.jump_o == 0 && CPU.Control.branch_o == 0 )stall = stall +1;
-		if((CPU.Control.jump_o ) || (CPU.Control.branch_o && CPU.EQ.data_o))flush = flush+1;
+		
 
     // print PC
     $fdisplay(outfile, "cycle = %d, Start = %d, Stall = %d, Flush = %d\nPC = %d", counter, Start, stall, flush, CPU.PC.pc_o);
@@ -92,6 +91,9 @@ always@(posedge Clk) begin
     $fdisplay(outfile, "Data Memory: 0x1c = %d", {CPU.DATAMEMORY.out[31], CPU.DATAMEMORY.out[30], CPU.DATAMEMORY.out[29], CPU.DATAMEMORY.out[28]});
 
     $fdisplay(outfile, "\n");
+    
+    if(CPU.HD.mux8_o == 0 && CPU.Control.jump_o == 0 && CPU.Control.branch_o == 0 )stall = stall +1;
+		if((CPU.Control.jump_o ) || (CPU.Control.branch_o && CPU.EQ.data_o))flush = flush+1;
     
     counter = counter + 1;
     

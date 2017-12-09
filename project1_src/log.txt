@@ -1,3 +1,0 @@
-正在比較檔案 output.txt 和 FIBONACCI_OUTPUT.TXT
-FC: 找不到相異處
-

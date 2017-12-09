@@ -30,7 +30,7 @@ assign  RSdata_o = (RegWrite_i&&(RSaddr_i==RDaddr_i))? RDdata_i:register[RSaddr_
 assign  RTdata_o = (RegWrite_i&&(RTaddr_i==RDaddr_i))? RDdata_i:register[RTaddr_i];
 
 // Write Data   
-always@(negedge clk_i) begin
+always@(posedge clk_i) begin
     if(RegWrite_i)
         register[RDaddr_i] = RDdata_i;
 end

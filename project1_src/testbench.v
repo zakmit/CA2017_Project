@@ -60,10 +60,12 @@ initial begin
 end
   
 always@(posedge Clk) begin
-    if(counter == 19)    // stop after 30 cycles
+    if(counter == 30)    // stop after 30 cycles
         $stop;
   
 		// put in your own signal to count stall and flush
+    if(CPU.HD.mux8_o == 0 && CPU.Control.jump_o == 0 && CPU.Control.branch_o == 0 )stall = stall +1;
+		if((CPU.Control.jump_o ) || (CPU.Control.branch_o && CPU.EQ.data_o))flush = flush+1;
 		
 
     // print PC
@@ -92,8 +94,6 @@ always@(posedge Clk) begin
 
     $fdisplay(outfile, "\n");
     
-    if(CPU.HD.mux8_o == 0 && CPU.Control.jump_o == 0 && CPU.Control.branch_o == 0 )stall = stall +1;
-		if((CPU.Control.jump_o ) || (CPU.Control.branch_o && CPU.EQ.data_o))flush = flush+1;
     
     counter = counter + 1;
     

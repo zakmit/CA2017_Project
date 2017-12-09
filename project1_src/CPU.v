@@ -178,6 +178,7 @@ MEMWB MEMWB(
 );//ALL COMPLETE
 
 DATAMEMORY DATAMEMORY(
+	.clk_i          (clk_i),
   .exmem_alu_i    (EXMEM_ALU_O),
 	.exmem_mux7_i   (EXMEM_MUX7_O),
 	.exmem_m_MW_i   (EXMEM_M_O[0]), //MemWrite

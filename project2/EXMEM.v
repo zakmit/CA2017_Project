@@ -21,7 +21,7 @@ input [1:0]  m_i;
 input [31:0] alu_i;
 input [31:0] mux7_i;
 input [4:0]  mux3_i;
-
+input stall_i;
 output [1:0]  wb_o;
 output [1:0]  m_o;
 output [31:0] alu_o;

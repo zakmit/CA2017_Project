@@ -1,4 +1,4 @@
-`define CYCLE_TIME 50			
+ `define CYCLE_TIME 50			
 
 module TestBench;
 
@@ -46,6 +46,8 @@ Data_Memory Data_Memory
 );
   
 initial begin
+	$dumpfile("my_dump.vcd");
+		$dumpvars;
 	counter = 1;
 	
 	// initialize instruction memory (2KB)

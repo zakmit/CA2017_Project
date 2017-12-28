@@ -45,7 +45,7 @@ output [31:0] signextend_o;
 output [4:0]  rs_o;
 output [4:0]  rt_o;
 output [4:0]  rd_o;
-
+input stall_i;
 reg [1:0] wb_o;
 reg [1:0] m_o;
 reg [3:0] ex_o;

@@ -15,7 +15,7 @@ input flush_i;
 input hazard_i;
 input [31:0] add_pc_i;
 input [31:0] instruction_i;
-
+input stall_i;
 output [31:0] pc_o;
 output [31:0] inst_o;
 

@@ -17,7 +17,7 @@ input [1:0] exmem_wb_i;
 input [31:0] data_memory_readdata_i;
 input [31:0] exmem_alu_i;
 input [4:0] exmem_mux3_i;
-
+input stall_i;	
 output [1:0] wb_o;
 output [31:0] read_data_o;
 output [31:0] alu_o;

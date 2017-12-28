@@ -119,6 +119,13 @@ wire [31:0] DATAMEMORY_READ_DATA_O;
 wire [31:0] inst_addr;
 wire [31:0] inst;
 wire mem_stall;
+input	[256-1:0]	mem_data_i; 
+input				mem_ack_i; 	
+output	[256-1:0]	mem_data_o; 
+output	[32-1:0]	mem_addr_o; 	
+output				mem_enable_o; 
+output				mem_write_o; 
+
 IFID IFID(
   .clk_i          (clk_i),
   .add_pc_i       (ADD_PC_DATA_O),
@@ -161,7 +168,7 @@ EXMEM EXMEM(
 	.alu_i         (ALU_DATA_O),
 	.mux7_i        (MUX7_DATA_O),
 	.mux3_i        (MUX3_DATA_O),
-    .stall_i	   (mem_stall)
+    .stall_i	   (mem_stall),
 	.wb_o          (EXMEM_WB_O), // go to MEMWB
 	.m_o           (EXMEM_M_O), // go to Datamemory(memread,memwrite), forwarding unit
 	.alu_o         (EXMEM_ALU_O),//go to MEMWB , 	mux6
@@ -176,7 +183,7 @@ MEMWB MEMWB(
 	.data_memory_readdata_i (DATAMEMORY_READ_DATA_O),
 	.exmem_alu_i            (EXMEM_ALU_O),
 	.exmem_mux3_i           (EXMEM_MUX3_O),
-    .stall_i				(mem_stall)
+    .stall_i				(mem_stall),
 	.wb_o        (MEMWB_WB_O), //go to mux5, forwarding unit , register(RegWritte)
 	.read_data_o (MEMWB_READ_DATA_O),//go to mux5
 	.alu_o       (MEMWB_ALU_O),//go to mux5
@@ -383,8 +390,8 @@ dcache_top dcache
 	.mem_write_o(mem_write_o), 
 	
 	// to CPU interface	
-	.p1_data_i(EXMEM_ALU_O), 
-	.p1_addr_i(EXMEM_MUX7_O), 	
+	.p1_data_i(EXMEM_MUX7_O), 
+	.p1_addr_i(EXMEM_ALU_O), 	
 	.p1_MemRead_i(EXMEM_M_O[1]), 
 	.p1_MemWrite_i(EXMEM_M_O[0]), 
 	.p1_data_o(DATAMEMORY_READ_DATA_O), 
@@ -394,3 +401,4 @@ dcache_top dcache
 
 endmodule
 
+	
